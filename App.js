@@ -8,14 +8,6 @@ export default function App() {
     <NavigationContainer>
       <StatusBar barStyle = "auto" hidden = {false}  translucent = {true}/>
   <MenuNavigation/>
-  <Text style={{ fontSize: 20 }}>Bienvenue</Text>
-  <Text style={{ fontSize: 20 }}>Bienvenue</Text>
-  <Text style={{ fontSize: 20 }}>Bienvenue</Text>
-  v
-  v
-  v
-  v<Text style={{ fontSize: 20 }}>Bienvenue</Text>
-  
     </NavigationContainer>
   );
 }
