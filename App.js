@@ -6,7 +6,7 @@ export default function App() {
   return (
     
     <NavigationContainer>
-    
+      <StatusBar barStyle = "auto" hidden = {false}  translucent = {false}/>
   <MenuNavigation/>
     </NavigationContainer>
   );
