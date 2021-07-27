@@ -1,6 +1,10 @@
 import React from "react";
 import { View, StyleSheet, Text, Dimensions } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from "react-native-responsive-screen";
 
 class Accueil extends React.Component {
   constructor(props) {
@@ -26,27 +30,28 @@ class Accueil extends React.Component {
         >
           <Icon
             name="menu"
-            size={45}
+            size={wp('10%'),hp('7%')}
             onPress={() => {
               this._Menu();
             }}
           />
-          <View  width={Dimensions.get('window').width / 3}
-          >
-            <Text style={{ fontSize: 30 }}>Accueil</Text>
+          <View style={{alignItems:'center',width:wp('75%')}}>
+            <Text style={{ fontSize: hp("5%") }}>Accueil</Text>
           </View>
         </View>
 
-        <View style={{ alignItems: "center", marginTop: 10, marginBottom: 30 }}>
-          <Text style={{ fontSize: 20 }}>Bienvenue</Text>
+        <View
+          style={{ alignItems: "center", width: wp("95%"), height: hp("10%") }}
+        >
+          <Text style={{ fontSize: hp("4%") }}>Bienvenue</Text>
         </View>
         <View style={styles.info}>
-          <Text style={{ fontSize: 14 }}>
+          <Text style={{ fontSize: hp("2%") }}>
             Votre derniere dose date du : {this.state.doseDer}{" "}
           </Text>
         </View>
         <View style={styles.info}>
-          <Text style={{ fontSize: 14 }}>
+          <Text style={{ fontSize: hp("2%") }}>
             Votre prochaine dose est le : {this.state.doseProch}{" "}
           </Text>
         </View>
@@ -57,7 +62,6 @@ class Accueil extends React.Component {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "#fff",
-    marginTop: 25,
     flex: 1,
   },
   info: {
