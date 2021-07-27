@@ -1,6 +1,7 @@
 import React from "react";
-import { View, StyleSheet, Text, Dimensions } from "react-native";
+import { View, StyleSheet, Text, Dimensions, StatusBar } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 class Accueil extends React.Component {
   constructor(props) {
@@ -17,7 +18,10 @@ class Accueil extends React.Component {
 
   render() {
     return (
+      
       <View style={styles.container}>
+              <StatusBar barStyle = "auto" hidden = {false}  translucent = {false}/>
+
         <View
           style={{
             flexDirection: "row",
@@ -31,12 +35,10 @@ class Accueil extends React.Component {
               this._Menu();
             }}
           />
-          <View  width={Dimensions.get('window').width / 3}
-          >
+          <View width={Dimensions.get("window").width / 3}>
             <Text style={{ fontSize: 30 }}>Accueil</Text>
           </View>
         </View>
-
         <View style={{ alignItems: "center", marginTop: 10, marginBottom: 30 }}>
           <Text style={{ fontSize: 20 }}>Bienvenue</Text>
         </View>
@@ -57,7 +59,6 @@ class Accueil extends React.Component {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "#fff",
-    marginTop: 25,
     flex: 1,
   },
   info: {

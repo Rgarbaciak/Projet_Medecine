@@ -29,7 +29,9 @@ export default function MenuNavigation() {
       <Drawer.Screen name="Accueil" component={Accueil} />
       <Drawer.Screen name="Doses" component={Doses} />
       <Drawer.Screen name="Inr" component={Inr} />
+      
       <Drawer.Screen name="Infos" component={Infos} />
+
     </Drawer.Navigator>
   );
 }

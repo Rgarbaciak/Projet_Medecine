@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet,Text,Dimensions } from "react-native";
+import { View, StyleSheet,Text,Dimensions,StatusBar } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
 
 class Inr extends React.Component {
@@ -10,6 +10,8 @@ class Inr extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+              <StatusBar barStyle = "auto" hidden = {false}  translucent = {false}/>
+
          <View
           style={{
             flexDirection: "row",
@@ -34,7 +36,6 @@ class Inr extends React.Component {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "#fff",
-    marginTop: 25,
     flex: 1,
   },
 });
