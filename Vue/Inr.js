@@ -1,6 +1,10 @@
 import React from "react";
-import { View, StyleSheet,Text,Dimensions,StatusBar } from "react-native";
+import { View, StyleSheet, Text, Dimensions } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from "react-native-responsive-screen";
 
 class Inr extends React.Component {
   _Menu() {
@@ -10,9 +14,7 @@ class Inr extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-              <StatusBar barStyle = "auto" hidden = {false}  translucent = {false}/>
-
-         <View
+        <View
           style={{
             flexDirection: "row",
             backgroundColor: "#5A8DF9",
@@ -20,15 +22,15 @@ class Inr extends React.Component {
         >
           <Icon
             name="menu"
-            size={45}
+            size={(wp("10%"), hp("7%"))}
             onPress={() => {
               this._Menu();
             }}
           />
-          <View width={Dimensions.get('window').width / 3}>
-            <Text style={{ fontSize: 30 }}>Inr</Text>
+          <View style={{ alignItems: "center", width: wp("75%") }}>
+            <Text style={{ fontSize: hp("5%") }}>Inr</Text>
           </View>
-          </View>
+        </View>
       </View>
     );
   }
