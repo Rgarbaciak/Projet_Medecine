@@ -7,13 +7,6 @@ export default function App() {
     
     <NavigationContainer>
       <StatusBar barStyle = "auto" hidden = {false}  translucent = {true}/>
-      <Text>Salut</Text>
-      <Text>Salut</Text>
-      <Text>Salut</Text>
-
-
-      <Text>Salut</Text>
-
   <MenuNavigation/>
     </NavigationContainer>
   );
