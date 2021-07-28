@@ -1,18 +1,14 @@
 import React from "react";
-import { View, StyleSheet, Text, Dimensions,Button } from "react-native";
+import { View, StyleSheet, Text, Dimensions } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
 
-
-class Inr extends React.Component {
+class Doses extends React.Component {
   _Menu() {
     this.props.navigation.openDrawer();
-  }
-  _AddInr(){
-    this.props.navigation.navigate("AjoutInr")
   }
 
   render() {
@@ -32,11 +28,9 @@ class Inr extends React.Component {
             }}
           />
           <View style={{ alignItems: "center", width: wp("78%") }}>
-            <Text style={{ fontSize: hp("4%") }}>Inr</Text>
+            <Text style={{ fontSize: hp("4%") }}>Ajout d'un Inr</Text>
           </View>
         </View>
-        <Button title="salut" onPress={() =>{this._AddInr()}}/>
-
       </View>
     );
   }
@@ -47,4 +41,4 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 });
-export default Inr;
+export default Doses;
