@@ -22,13 +22,13 @@ class Inr extends React.Component {
         >
           <Icon
             name="menu"
-            size={(wp("10%"), hp("7%"))}
+            size={(wp("12%"), hp("6%"))}
             onPress={() => {
               this._Menu();
             }}
           />
-          <View style={{ alignItems: "center", width: wp("75%") }}>
-            <Text style={{ fontSize: hp("5%") }}>Inr</Text>
+          <View style={{ alignItems: "center", width: wp("78%") }}>
+            <Text style={{ fontSize: hp("4%") }}>Inr</Text>
           </View>
         </View>
       </View>

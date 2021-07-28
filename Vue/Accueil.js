@@ -13,6 +13,8 @@ class Accueil extends React.Component {
     this.state = {
       doseDer: "20/07/2021",
       doseProch: "05/08/2021",
+      InrDer: "1,5",
+      dose: "3",
     };
   }
   _Menu() {
@@ -30,29 +32,37 @@ class Accueil extends React.Component {
         >
           <Icon
             name="menu"
-            size={(wp("10%"), hp("7%"))}
+            size={(wp("12%"), hp("6%"))}
             onPress={() => {
               this._Menu();
             }}
           />
-          <View style={{ alignItems: "center", width: wp("75%") }}>
-            <Text style={{ fontSize: hp("5%") }}>Accueil</Text>
+          <View style={{ alignItems: "center", width: wp("78%") }}>
+            <Text style={{ fontSize: hp("4%") }}>Accueil</Text>
           </View>
         </View>
 
         <View
-          style={{ alignItems: "center", width: wp("95%"), height: hp("10%") }}
+          style={{ alignItems: "center", width: wp("100%"), height: hp("10%") }}
         >
-          <Text style={{ fontSize: hp("4%") }}>Bienvenue</Text>
+          <Text style={{ fontSize: hp("3%") }}>Bienvenue</Text>
         </View>
         <View style={styles.info}>
           <Text style={{ fontSize: hp("2%") }}>
-            Votre derniere dose date du : {this.state.doseDer}{" "}
+            Dose du jour : {this.state.dose}
           </Text>
         </View>
         <View style={styles.info}>
           <Text style={{ fontSize: hp("2%") }}>
-            Votre prochaine dose est le : {this.state.doseProch}{" "}
+            Prochain test INR : {this.state.doseProch}
+          </Text>
+        </View>
+        <View style={styles.info}>
+          <Text style={{ fontSize: hp("2%") }}>
+            Mon INR est de: {this.state.InrDer}
+          </Text>
+          <Text style={{ fontSize: hp("2%") }}>
+             Datant du :{this.state.doseDer}
           </Text>
         </View>
       </View>
@@ -65,10 +75,12 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   info: {
-    marginTop: 10,
-    marginBottom: 30,
+    marginLeft:wp("20%"),
+    marginRight:wp("20%"),
+    marginBottom:wp("5%"),
+    width:wp("60%"),
+
     borderWidth: 2,
-    marginRight: 50,
   },
 });
 export default Accueil;

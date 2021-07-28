@@ -14,7 +14,7 @@ class Infos extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <View
+       <View
           style={{
             flexDirection: "row",
             backgroundColor: "#5A8DF9",
@@ -22,13 +22,13 @@ class Infos extends React.Component {
         >
           <Icon
             name="menu"
-            size={(wp("10%"), hp("7%"))}
+            size={(wp("12%"), hp("6%"))}
             onPress={() => {
               this._Menu();
             }}
           />
-          <View style={{ alignItems: "center", width: wp("75%") }}>
-            <Text style={{ fontSize: hp("5%") }}>Informations</Text>
+          <View style={{ alignItems: "center", width: wp("78%") }}>
+            <Text style={{ fontSize: hp("4%") }}>Informations</Text>
           </View>
         </View>
       </View>
